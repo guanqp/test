@@ -53,8 +53,10 @@ class test
 {
 public:
     test(){
-        // check the existence of "sayHi"
-        cout << "has_member(T, heading) " << temp_has_member(typename T:: value_type, heading) << endl;
+        // check the existence of "heading", T as vector<value_type>
+        cout << "container has_member(T, heading) " << temp_has_member(typename T:: value_type, heading) << endl;
+        // If T is just a template without cantianer, it will be easier:
+        cout << "has_member(T, heading) " << temp_has_member(T, heading) << endl;
         cout << endl;
     }
     ~test(){}
